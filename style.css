@@ -1,0 +1,2073 @@
+@charset "UTF-8";
+/* リセットCSS
+===================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li, dd {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+/* 基本設定
+===================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  letter-spacing: 1.5px;
+}
+
+@media (min-width: 1191px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1190px) {
+  body {
+    font-size: calc(20px - 4px);
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: calc(20px - 6px);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h2, h3 {
+  line-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 1190px;
+  max-width: 100%;
+}
+
+@media (min-width: 1191px) {
+  .inner {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .inner {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    padding: 0 15px;
+  }
+}
+
+.txtl {
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .txtl {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .txtl {
+    font-size: calc(28px - 4px);
+  }
+}
+
+@media (max-width: 767px) {
+  .txtl {
+    font-size: calc(28px - 10px);
+  }
+}
+
+@media (min-width: 1191px) {
+  .txts {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .txts {
+    font-size: calc(16px - 4px);
+  }
+}
+
+@media (max-width: 767px) {
+  .txts {
+    font-size: calc(16px - 6px);
+  }
+}
+
+@media (min-width: 1191px) {
+  .txtxs {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .txtxs {
+    font-size: calc(14px - 2px);
+  }
+}
+
+@media (max-width: 767px) {
+  .txtxs {
+    font-size: calc(14px - 2px);
+  }
+}
+
+.fwb {
+  font-weight: 600;
+}
+
+.font-color {
+  color: #ebb94d;
+}
+
+.title-box {
+  position: relative;
+  width: 860px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+@media (max-width: 767px) {
+  .title-box {
+    padding: 5px 10px;
+  }
+}
+
+.title-box::before, .title-box::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+}
+
+.title-box::before {
+  top: 0;
+  left: 0;
+  border-top: 4px solid #ebb94d;
+  border-left: 4px solid #ebb94d;
+}
+
+.title-box::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 4px solid #ebb94d;
+  border-right: 4px solid #ebb94d;
+}
+
+.underline {
+  background: linear-gradient(transparent 70%, #ebb94d 70%);
+}
+
+.brsp {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .brsp {
+    display: block;
+  }
+}
+
+.brtab {
+  display: none;
+}
+
+@media (max-width: 1190px) {
+  .brtab {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .brhidesp {
+    display: none;
+  }
+}
+
+@media (min-width: 1191px) {
+  .br-hidepc {
+    display: none;
+  }
+}
+
+.util-box {
+  background-color: #da6b64;
+  cursor: pointer;
+}
+
+.util-box .util-link {
+  display: inline-block;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 75px;
+  z-index: 20;
+  background-color: #fff;
+}
+
+@media (max-width: 767px) {
+  .header {
+    height: 62px;
+  }
+}
+
+.header__inner {
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .header__inner {
+    height: 62px;
+    padding: 0 0 0 10px;
+  }
+}
+
+.header__left {
+  margin-right: auto;
+}
+
+@media (min-width: 1191px) {
+  .header__left {
+    align-items: flex-end;
+    display: flex;
+    flex-flow: row-reverse;
+  }
+}
+
+@media (max-width: 1190px) {
+  .header__left {
+    align-items: flex-end;
+    display: flex;
+    flex-flow: row-reverse;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__left {
+    display: block;
+  }
+}
+
+.header__left p {
+  padding: 0 0 8px 5px;
+}
+
+@media (max-width: 767px) {
+  .header__left p {
+    font-size: 10px;
+    letter-spacing: 0.1px;
+    padding: 0;
+  }
+}
+
+.header__left-img {
+  width: 128px;
+}
+
+@media (max-width: 767px) {
+  .header__left-img {
+    width: 90px;
+  }
+}
+
+.header__right {
+  margin-left: auto;
+}
+
+.header__btn {
+  text-align: center;
+  width: 315px;
+  height: 44px;
+  padding: 11px 40px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1190px) {
+  .header__btn {
+    width: 262px;
+    height: 41px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__btn {
+    display: none;
+  }
+}
+
+.header__btn a {
+  display: block;
+  letter-spacing: 0;
+  font-weight: 300;
+}
+
+.header__util-box-sp {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header__util-box-sp {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #da6b64;
+    cursor: pointer;
+    text-align: center;
+    width: 76px;
+    height: 62px;
+    padding: 9px 11px;
+  }
+  .header__util-box-sp img {
+    width: 20px;
+  }
+  .header__util-box-sp .header__util-link-sp {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+.top {
+  height: 500px;
+  background-image: url("https://nabekou1996.github.io/portfolio_2/top.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .top {
+    background-image: url("https://nabekou1996.github.io/portfolio_2/top-sp.jpg");
+    height: 312px;
+  }
+}
+
+.top__inner {
+  text-align: center;
+}
+
+.top__wrap p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .top__wrap p {
+    margin: 0;
+  }
+}
+
+.top__logo {
+  width: 317px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .top__logo {
+    margin: 20px;
+  }
+}
+
+.reseption {
+  background-color: #ebb94d;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+}
+
+.reseption__area {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1191px) {
+  .reseption__area {
+    margin-bottom: 40px;
+  }
+}
+
+.reseption__area span {
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  padding: 3px;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 1190px) {
+  .reseption__area span {
+    font-size: 14.4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reseption__area span {
+    font-size: 13.5px;
+  }
+}
+
+.reseption__btn {
+  text-align: center;
+  max-width: 1028px;
+  height: 104px;
+  padding: 0 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+}
+
+@media (max-width: 1190px) {
+  .reseption__btn {
+    height: 78px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .reseption__btn {
+    height: 94px;
+    margin-top: 25px;
+  }
+}
+
+.reseption__btn a {
+  display: block;
+  font-weight: 600;
+}
+
+@media (max-width: 1190px) {
+  .reseption__btn a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reseption__btn a {
+    font-size: 20px;
+  }
+}
+
+.reseption__recruitment {
+  margin-top: 50px;
+}
+
+@media (max-width: 1190px) {
+  .reseption__recruitment {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reseption__recruitment {
+    margin-top: 30px;
+  }
+}
+
+.reseption__recruitment-text {
+  font-size: 21px;
+}
+
+@media (max-width: 1190px) {
+  .reseption__recruitment-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reseption__recruitment-text {
+    font-size: 15px;
+  }
+}
+
+.reseption__recruitment-text + .reseption__recruitment-text {
+  margin-top: 30px;
+}
+
+@media (max-width: 1190px) {
+  .reseption__recruitment-text + .reseption__recruitment-text {
+    margin-top: 30px;
+  }
+}
+
+.reseption__sns {
+  margin-top: 20px;
+}
+
+.concept1 {
+  text-align: center;
+  background-image: url("https://nabekou1996.github.io/portfolio_2/introbottom.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 1191px) {
+  .concept1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .concept1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .concept1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .concept1 {
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+
+@media (min-width: 1191px) {
+  .concept1__body {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 1190px) {
+  .concept1__body {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .concept1__body {
+    padding: 25px 0;
+  }
+}
+
+.concept1__text {
+  margin-bottom: 24px;
+}
+
+.about {
+  position: relative;
+  background-color: #fef5e0;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.circle-warp {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.circle {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ebb94d;
+  color: #fff;
+  font-size: 14px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.about__sub {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.about__contents {
+  background-color: #fff;
+  border: 2px solid #ebb94d;
+  padding: 30px;
+  margin: 30px auto;
+}
+
+@media (max-width: 767px) {
+  .about__contents {
+    padding: 10px;
+  }
+}
+
+.about__contents-title {
+  margin-bottom: 10px;
+}
+
+.about__list {
+  display: flex;
+  justify-content: center;
+}
+
+.about__list-item {
+  padding: 10px;
+}
+
+@media (max-width: 767px) {
+  .about__list-item {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about__list-item-img {
+    height: 30px;
+  }
+}
+
+.about__list-item-text {
+  margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .about__list-item-text {
+    font-size: 10px;
+  }
+}
+
+.step {
+  background-image: url("https://nabekou1996.github.io/portfolio_2/aboutsecondbg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .step {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .step {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .step {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .step {
+    background-image: url("https://nabekou1996.github.io/portfolio_2/aboutsecondbgsp.jpg");
+  }
+}
+
+.step .txtl {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .step__inner {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .step__inner .txtl {
+    line-height: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .step__inner .step__sub {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+}
+
+.step__sub {
+  margin-bottom: 10px;
+}
+
+.step__list {
+  margin-top: 40px;
+}
+
+@media (min-width: 1191px) {
+  .step__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.step__list-item {
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  padding: 30px 30px 20px;
+}
+
+@media (min-width: 1191px) {
+  .step__list-item {
+    flex: 0 0 32%;
+  }
+}
+
+@media (max-width: 1190px) {
+  .step__list-item {
+    max-width: 447px;
+    margin: 0 auto 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .step__list-item {
+    margin: 0 auto 15px;
+    padding: 15px 50px;
+  }
+}
+
+.step__list-item p:nth-child(1) {
+  background-color: #ebb94d;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.step__list-item p:nth-child(2) {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .step__list-item p:nth-child(2) {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+.step__list-item p:nth-child(3) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1190px) {
+  .step__list-item p:nth-child(3) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .step__list-item p:nth-child(3) {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.step2 {
+  background-color: #016ea9;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 1191px) {
+  .step2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .step2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .step2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.study {
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .study {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .study {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .study {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.study .txtl {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.study__inner .txts {
+  margin-bottom: 10px;
+}
+
+.study__sub {
+  margin-bottom: 10px;
+}
+
+.study__list {
+  display: flex;
+  justify-content: center;
+  margin: 40px 25px;
+}
+
+@media (max-width: 767px) {
+  .study__list {
+    margin: 0 20px 15px;
+  }
+}
+
+.study__list-item {
+  padding: 0 15px;
+}
+
+.merit {
+  background-color: #fef5e0;
+}
+
+@media (min-width: 1191px) {
+  .merit {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .merit {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .merit {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.merit__list {
+  margin-top: 40px;
+}
+
+@media (min-width: 1191px) {
+  .merit__list {
+    display: flex;
+  }
+}
+
+.merit__list-item {
+  width: 100%;
+  text-align: center;
+  padding: 0 15px;
+}
+
+@media (min-width: 1191px) {
+  .merit__list-item {
+    width: 33.3333%;
+  }
+}
+
+@media (max-width: 1190px) {
+  .merit__list-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .merit__list-item {
+    margin-bottom: 10px;
+  }
+}
+
+.merit__list-item .font-color {
+  margin: 8px 0;
+}
+
+.merit__list-item .txts {
+  margin: 8px 0;
+}
+
+.merit__list-item-img {
+  object-fit: cover;
+  height: 180px;
+}
+
+@media (min-width: 1191px) {
+  .merit__list-item-img {
+    width: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .merit__list-item-img {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+.merit__list-item-text-wrap {
+  padding: 0 20px;
+}
+
+@media (min-width: 1191px) {
+  .merit__list-item-text-wrap {
+    padding: 0;
+  }
+}
+
+.merit__list-item-text-wrap p:nth-child(1) {
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .merit__list-item-text-wrap p:nth-child(1) {
+    text-align: left;
+  }
+}
+
+.merit__list-item-text-wrap p:nth-child(2) {
+  text-align: left;
+}
+
+.merit__support-wrap {
+  background-color: #fff;
+  border: 2px solid #ebb94d;
+  padding: 40px 20px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .merit__support-wrap {
+    margin: 15px 20px;
+  }
+}
+
+.merit__support-wrap p {
+  margin-bottom: 10px;
+}
+
+.merit__bottom {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.member {
+  background-image: url("https://nabekou1996.github.io/portfolio_2/teacherbg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .member {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .member {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .member {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.member__sub {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1191px) {
+  .member__list {
+    display: flex;
+  }
+}
+
+.member__list-item {
+  padding: 0 15px;
+  width: 100%;
+}
+
+@media (min-width: 1191px) {
+  .member__list-item {
+    width: 33.3333%;
+  }
+}
+
+.member__list-item-img {
+  position: relative;
+  bottom: -35px;
+  border-radius: 50%;
+}
+
+.member__list-item-body {
+  border: 3px solid #fff;
+  padding: 40px;
+}
+
+@media (min-width: 1191px) {
+  .member__list-item-body {
+    min-height: 391px;
+  }
+}
+
+@media (max-width: 767px) {
+  .member__list-item-body {
+    padding: 40px 10px 10px;
+  }
+}
+
+.member__list-item-body p {
+  margin-bottom: 10px;
+}
+
+.member__list-item-body p:nth-child(3) {
+  text-align: left;
+}
+
+.message1__title-wrap {
+  position: relative;
+  background-color: #ebb94d;
+  color: #fff;
+}
+
+@media (min-width: 1191px) {
+  .message1__title-wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .message1__title-wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .message1__title-wrap {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.message1__title-wrap .circle {
+  background-color: #fff;
+  color: #ebb94d;
+}
+
+.message1__title-wrap .title-box::before {
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+}
+
+.message1__title-wrap .title-box::after {
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+}
+
+.message1__title-wrap::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  top: 100%;
+  left: 50%;
+  border: 25px solid transparent;
+  border-top-color: #ebb94d;
+  margin-left: -25px;
+}
+
+@media (max-width: 767px) {
+  .message1__title-wrap::after {
+    border: 15px solid transparent;
+    margin-left: -15px;
+    border-top-color: #ebb94d;
+  }
+}
+
+@media (min-width: 1191px) {
+  .message1__inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .message1__inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .message1__inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .message1__inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.message1__inner > p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.message1__inner > p:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.message1__list {
+  margin: 0 auto;
+  width: 780px;
+  max-width: 100%;
+}
+
+.message1__list-item {
+  display: flex;
+  padding: 20px 0;
+}
+
+.message1__list-item-img {
+  display: block;
+  flex: 0 0 31.4102%;
+  padding-right: 15px;
+}
+
+.message1__list-item-img img {
+  border: 3px solid #ebb94d;
+}
+
+.message1__list-item-body {
+  font-style: italic;
+  color: #777;
+}
+
+.message1__list-item-body p:nth-child(1) {
+  margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+  .message1__list-item-body p:nth-child(1) {
+    margin-top: -5px;
+  }
+}
+
+.message1__list-item-body p:nth-child(2) {
+  margin: 8px 0 10px;
+}
+
+.message1__list-item-body span {
+  font-size: 85%;
+  text-decoration: underline;
+}
+
+.contents {
+  background-image: url("https://nabekou1996.github.io/portfolio_2/classbg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .contents {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .contents {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contents {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.contents__inner > h2, .contents__inner p {
+  color: #fff;
+}
+
+.contents__inner > p {
+  margin-bottom: 10px;
+}
+
+.contents__list-container {
+  padding: 40px 0;
+  justify-content: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1191px) {
+  .contents__list-container {
+    display: flex;
+  }
+}
+
+.contents__list-wrap {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1191px) {
+  .contents__list-wrap {
+    width: 50%;
+  }
+}
+
+.contents__list {
+  background-color: #fff;
+  border: 2px solid #016ea9;
+  padding: 0;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+@media (min-width: 1191px) {
+  .contents__list {
+    margin-top: 0;
+  }
+}
+
+.contents__list-item {
+  padding: 10px;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+@media (max-width: 1190px) {
+  .contents__list-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contents__list-item {
+    font-size: 12px;
+  }
+}
+
+.contents__list-item:first-child {
+  background-color: #016ea9;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .contents__list-item:first-child {
+    font-size: 15px;
+  }
+}
+
+.contents2 {
+  background-color: #016ea9;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 1191px) {
+  .contents2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .contents2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contents2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: 1191px) {
+  .flow {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .flow {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .flow {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.flow__inner {
+  text-align: center;
+}
+
+.flow__img {
+  margin: 40px 0;
+}
+
+.flow__items {
+  width: 1170px;
+  max-width: 100%;
+}
+
+.flow__item {
+  margin: 0 auto;
+  background-color: #fef5e0;
+  border-radius: 10px;
+  display: flex;
+  padding: 10px 35px;
+}
+
+@media (max-width: 767px) {
+  .flow__item {
+    margin-top: 5px;
+    padding: 10px 15px;
+    display: block;
+  }
+  .flow__item:nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+.flow__item-head {
+  flex: 0 1 200px;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+  .flow__item-head {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.flow__item-head .accordion__icon {
+  margin-left: auto;
+}
+
+.flow-margin {
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .flow-margin {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .flow__item-img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+  }
+}
+
+.flow__item-title {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .flow__item-title {
+    display: inline-block;
+    margin-top: 0;
+  }
+  .flow__item-title br {
+    display: none;
+  }
+}
+
+.flow__item-body {
+  text-align-last: left;
+  width: 900px;
+  max-width: 100%;
+  padding-top: 10px;
+}
+
+.flow__item-body-in p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .flow__item-body-in p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.flow__item-body-in p:nth-child(1) {
+  margin-bottom: 0;
+}
+
+.reason {
+  padding: 80px;
+  background-image: url("https://nabekou1996.github.io/portfolio_2/bangkokbg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .reason {
+    background-image: url("https://nabekou1996.github.io/portfolio_2/bangkokbgsp.jpg");
+    padding: 20px 15px;
+  }
+}
+
+.reason__inner {
+  text-align: left;
+}
+
+.reason__inner .txtl {
+  margin: 20px 0;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 767px) {
+  .reason__inner .txtl {
+    text-align: center;
+  }
+}
+
+.reason__inner .txtxs {
+  margin-bottom: 20px;
+}
+
+.reason__inner p {
+  margin-bottom: 10px;
+}
+
+.reason__list {
+  margin-bottom: 20px;
+}
+
+.benefit {
+  text-align: center;
+  background-color: #f7c23c;
+}
+
+@media (min-width: 1191px) {
+  .benefit {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .benefit {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefit {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.benefit__inner > .txtl {
+  margin: 20px 0 40px;
+}
+
+.benefit__inner > p {
+  margin-bottom: 10px;
+}
+
+.benefit__inner > p span {
+  color: #fff;
+}
+
+.benefit__contents-title {
+  background-color: #f7c23c;
+  position: relative;
+  display: inline-block;
+  bottom: -30px;
+  padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .benefit__contents-title {
+    line-height: 1.6;
+    margin-top: 0;
+  }
+}
+
+.benefit__list {
+  padding: 40px;
+  border: 2px solid #fff;
+}
+
+@media (min-width: 1191px) {
+  .benefit__list {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefit__list {
+    padding: 30px;
+  }
+}
+
+.benefit__list-item-wrap {
+  padding: 0 15px;
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .benefit__list-item-wrap {
+    width: 33.3333%;
+  }
+}
+
+@media (max-width: 1190px) {
+  .benefit__list-item-wrap {
+    margin: 0 auto;
+  }
+}
+
+.benefit__list-item-box {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 10px;
+  height: 250px;
+  width: 250px;
+  text-align: center;
+}
+
+.benefit__list-item {
+  padding: 15px;
+  height: 250px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.benefit__list-item p {
+  margin-bottom: 10px;
+}
+
+.benefit__list-item p:nth-child(1) {
+  font-size: 24px;
+}
+
+.benefit__list-item p:nth-child(2) {
+  font-size: 14px;
+}
+
+.benefit__sp-list {
+  display: flex;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.benefit__sp-list-head {
+  flex: 0 0 27.2109%;
+  max-width: 100%;
+  text-align: center;
+  color: #f7c23c;
+}
+
+.benefit__sp-list-head p {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.benefit__sp-list-body {
+  padding: 12px 0;
+  color: #fff;
+}
+
+.concept2 {
+  background-image: url("https://nabekou1996.github.io/portfolio_2/specialdetail.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .concept2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .concept2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .concept2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.concept2 .title-box {
+  margin: 20px auto;
+}
+
+.concept2 .title-box::before {
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+}
+
+.concept2 .title-box::after {
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+}
+
+@media (max-width: 767px) {
+  .concept2__inner {
+    padding: 20px 10px;
+  }
+}
+
+.concept2__inner > .txtl {
+  margin: 20px 0;
+}
+
+.concept2__inner p {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .concept2__inner p {
+    font-size: 12px;
+  }
+}
+
+.message2 {
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .message2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .message2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .message2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.message2 p {
+  margin-bottom: 10px;
+}
+
+.message2__inner > .txtl {
+  margin: 20px 0 35px;
+}
+
+.message2__wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1191px) {
+  .message2__wrap {
+    display: flex;
+    width: 890px;
+    max-width: 100%;
+    margin: 40px auto 0;
+  }
+}
+
+.message2__img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1191px) {
+  .message2__img {
+    width: 25%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .message2__img {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .message2__img {
+    padding: 5px 0;
+  }
+}
+
+.message2__img img {
+  width: 100%;
+}
+
+.message2__body {
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+@media (min-width: 1191px) {
+  .message2__body {
+    width: 75%;
+    padding: 0 15px;
+  }
+}
+
+.message2__body p:nth-child(3) {
+  margin: 30px 0;
+}
+
+.contact {
+  background-color: #ebb94d;
+  text-align: center;
+}
+
+@media (min-width: 1191px) {
+  .contact {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .contact {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.contact__inner {
+  width: 920px;
+  min-height: 624px;
+}
+
+.contact__inner > .txtl {
+  margin: 20px 0;
+}
+
+.contact__inner > .txts {
+  margin-bottom: 40px;
+}
+
+.contact__form input, .contact__form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  height: 55px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.contact__form textarea {
+  height: 100px;
+  margin-top: 25px;
+}
+
+.contact__btn {
+  padding: 10px 80px;
+  border-radius: 50px;
+  font-size: 23px;
+}
+
+@media (min-width: 1191px) {
+  .qa {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .qa {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .qa {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.qa__inner > .txtl {
+  margin: 20px 0 40px;
+}
+
+.qa__items {
+  margin-bottom: 20px;
+}
+
+.qa__item + .qa__item {
+  margin-top: 5px;
+}
+
+.qa__item .accordion__head {
+  padding: 20px;
+  background-color: #fff !important;
+  color: #000000 !important;
+  border: 1px solid #e5e5e5 !important;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .qa__item .accordion__head {
+    padding: 10px;
+  }
+}
+
+.qa__item .accordion__head .accordion__icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.qa__item .accordion__body {
+  padding: 20px;
+}
+
+.qa__item .accordion__body .accordion__body-in {
+  margin-bottom: 10px;
+}
+
+.fa-question-circle {
+  color: #016ea9;
+}
+
+.footer {
+  background-color: #ececec;
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+.copyright {
+  font-size: 10px;
+  padding-bottom: 5px;
+}
+
+.copyright a {
+  color: #337ab7;
+}
+
+.footer__sns {
+  margin-bottom: 35px;
+}
+
+.totop {
+  display: block;
+  position: relative;
+  bottom: 100px;
+  right: 50px;
+  position: fixed;
+  width: 71.5px;
+  height: 72px;
+  background-color: #ececec;
+  text-align: center;
+  padding: 20px;
+}
+
+.totop i {
+  color: black;
+  font-size: 28px;
+}
